@@ -16,7 +16,7 @@ import java.util.stream.Collectors;
 @Component
 public class FileStorageAdapter {
     private static final String UPLOAD_DIR = "C:/Users/user/Documents/CPFFiles";
-    private static final String LIST_DIRECTORY_PATH = "C:/Users/user/Documents/CPFFiles"; // O cualquier ruta relevante
+    private static final String LIST_DIRECTORY_PATH = "C:/Users/user/Documents/CPFFiles";
 
     public void saveFile(MultipartFile file) {
         try {
