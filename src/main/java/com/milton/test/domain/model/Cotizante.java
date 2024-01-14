@@ -7,6 +7,7 @@ public class Cotizante {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sq_detallecotizante")
+    @SequenceGenerator(name = "sq_detallecotizante", sequenceName = "sq_detallecotizante", allocationSize = 1)
     private Long id;
 
     @OneToOne(fetch = FetchType.LAZY)

@@ -1,6 +1,8 @@
 package com.milton.test.domain.model;
 
 import jakarta.persistence.*;
+
+import java.sql.Blob;
 import java.sql.Timestamp;
 
 @Entity
@@ -9,6 +11,7 @@ public class Registro {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sq_numproceso")
+    @SequenceGenerator(name = "sq_numproceso", sequenceName = "sq_numproceso", allocationSize = 1)
     private Long id;
 
     @Column(nullable = false)
@@ -27,6 +30,7 @@ public class Registro {
     private Timestamp fechaCarga;
 
     @Lob
+    @Column(name = "contenido")
     private byte[] contenido;
 
     @Column(nullable = false)

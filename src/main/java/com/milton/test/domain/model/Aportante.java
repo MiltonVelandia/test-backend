@@ -9,6 +9,7 @@ public class Aportante {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sq_cabeceraaportante")
+    @SequenceGenerator(name = "sq_cabeceraaportante", sequenceName = "sq_cabeceraaportante", allocationSize = 1)
     private Long id;
 
     @OneToOne(fetch = FetchType.LAZY)
